@@ -1,0 +1,15 @@
+{
+  "name": "task-ai",
+  "version": "2.0.0",
+  "description": "AI-Powered Task Manager",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "node --watch api/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}
