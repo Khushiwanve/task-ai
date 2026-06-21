@@ -8,7 +8,7 @@ function getAllTasks(req, res) {
   let tasks = readTasks();
   const { status, priority, tag } = req.query;
   if (status) tasks = tasks.filter(t => t.status === status);
-  if (priority) tasks = tasks.filter(t => t.priority === priority);
+  if (priority) tasks = tasks.filter(t => t.priority === priority)
   if (tag) tasks = tasks.filter(t => t.tags && t.tags.includes(tag));
 
   // Stats summary
