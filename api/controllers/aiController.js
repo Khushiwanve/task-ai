@@ -79,7 +79,7 @@ Always respond with ONLY valid JSON, no markdown, no explanation. Format:
 
 // POST /api/ai/coach
 // Give it all tasks, get back productivity insights
-
+  async function getCoaching(req, res) {
   const tasks = readTasks();
   const { question } = req.body;
 
