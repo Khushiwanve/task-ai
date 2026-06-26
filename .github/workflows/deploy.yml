@@ -1,0 +1,21 @@
+name: Hello CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout karo
+        uses: actions/checkout@v4
+
+      - name:  print Hello 
+        run: echo "GitHub Actions chal raha hai! 🎉"
+
+      - name: Node version 
+        run: node --version
+
+      - name:  list Files
+        run: ls -la

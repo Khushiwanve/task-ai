@@ -369,7 +369,7 @@ body {
 }
 
 /* ============================================
-   Task list & cards
+    Task list & cards
    ============================================ */
 .task-list { display: flex; flex-direction: column; gap: 10px; }
 
