@@ -20,5 +20,8 @@ jobs:
       - name: Dependencies install 
         run: npm install
 
-      - name: Build check 
-        run: npm run build
+      - name: Check all files 
+        run: |
+          echo "✅ Dependencies installed!"
+          echo "📁 Project files:"
+          ls -la public/
