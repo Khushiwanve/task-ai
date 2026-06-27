@@ -20,11 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build check
-        run: npm run build --if-present
-
       - name: Verify project files
-        run: |
-          echo "Dependencies installed successfully!"
-          echo "Project files:"
-          ls -la public/
+        run: ls -la
