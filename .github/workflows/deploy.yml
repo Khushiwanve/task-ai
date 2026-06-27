@@ -9,22 +9,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Code checkout karo
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Node.js setup karo
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Dependencies install karo
+      - name: Install dependencies
         run: npm install
 
-      - name: Build check karo
+      - name: Build check
         run: npm run build --if-present
 
-      - name: Check karo sab files hain
+      - name: Verify project files
         run: |
-          echo "✅ Dependencies installed!"
-          echo "📁 Project files:"
-          ls -la public/s
+          echo "Dependencies installed successfully!"
+          echo "Project files:"
+          ls -la public/
