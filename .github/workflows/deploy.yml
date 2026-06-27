@@ -1,21 +1,24 @@
-name: Hello CI/CD
+name: CI Check + Auto Deploy
 
 on:
   push:
     branches: [main]
 
 jobs:
-  test-run:
+  build-check:
     runs-on: ubuntu-latest
+
     steps:
-      - name: code checkout karo
+      - name: Code checkout 
         uses: actions/checkout@v4
 
-      - name:  print Hello 
-        run: echo "GitHub Actions chal raha hai! 🎉"
+      - name: Node.js setup 
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Node version 
-        run: node --version
+      - name: Dependencies install 
+        run: npm install
 
-      - name:  list Files
-        run: ls -la
+      - name: Build check 
+        run: npm run build
